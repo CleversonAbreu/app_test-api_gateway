@@ -1,12 +1,15 @@
-## Docker
+## Projeto Backend
 
-Is very easy to install and deploy in a Docker container.
+Projeto parte aplicativo App_test
 
-By default, the Docker will expose port 8080, so change this within the
-Dockerfile if necessary. When ready, simply use the Dockerfile to
-build the image.
+## Mongo DB
 
-```sh
-docker build --pull --rm -f "Dockerfile" -t api-gateway:latest .
-docker run -p 3000:3000 --name api-gateway-container api-gateway:latest
-```
+MongoDb Docker via terminal:
+docker run -d --name mongo-app_test -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASSWORD=mongoadmin -p 27018:27017 mongo:6.0
+
+## RabbitMQ Docker Bitnami
+
+RabbitMQ Docker via terminal:
+docker pull bitnami/rabbitmq:latest
+
+docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 bitnami/rabbitmq:latest
