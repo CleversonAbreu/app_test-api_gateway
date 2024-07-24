@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  # App Service
+  app:
+    build: .
+    container_name: api_gateway_app
+    working_dir: /usr/src/app
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - '3000:3000'
